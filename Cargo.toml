@@ -1,0 +1,12 @@
+[package]
+name = "tap"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+libc = "0.2"
+
+[profile.release]
+strip = true  # Automatically strip symbols from the binary.
+lto = true
+codegen-units = 1
