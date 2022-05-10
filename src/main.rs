@@ -3,7 +3,7 @@ use std::{
     io::{stdin, stdout, Read, Write},
 };
 
-const BUF_SIZE: usize = 1024 * 3;
+const BUF_SIZE: usize = libc::BUFSIZ as usize;
 
 fn main() -> Result<(), Cow<'static, str>> {
     let arg = std::env::args().nth(1);
